@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>花艺长廊</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<style>
+			html,body{
+
+margin: 0;
+
+padding: 0;
+
+}
+
+.loading{
+
+position: absolute;
+
+top: 75%;
+
+left: 50%;
+
+margin-top: -50px;
+
+margin-left: -50px;
+
+animation: loading 2s linear infinite;
+
+}
+.loading img{
+
+width: 100px;
+
+height: 100px;
+
+}
+
+@keyframes loading {
+
+from{
+
+transform: rotate(0);
+
+}
+
+to{
+
+transform: rotate(360deg);
+
+}
+
+}
+
+			html,body{
+				margin:0;
+				padding:0;
+			}
+			body{
+				width: 640px;
+				height: 1030px;
+				background-image: url('img/background2.png');
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.hua2{
+				position: absolute;
+				width: 300px;
+				margin-left: 180px;
+				margin-top: 315px;
+				cursor: pointer;
+			}
+			.left2{
+				position: absolute;
+				width: 130px;
+				top: 450px;
+				left: 10px;
+				cursor: pointer;
+			}
+			.right2{
+				position: absolute;
+				width: 130px;
+				top: 450px;
+				left: 500px;
+				cursor: pointer;
+			}
+			.button{
+				position: absolute;
+				width: 100px;
+				margin-left: 540px;
+				margin-top: 880px;
+			}
+		</style>
+		<script>
+			var a=1;
+			function left(){
+				a--;
+				if(a<1){
+					a=7;
+				}
+				document.getElementById("zhanshi").src=("img/hua"+a+".png");
+			}
+			function right(){
+				a++;
+				if(a>7){
+					a=1;
+				}
+				document.getElementById("zhanshi").src=("img/hua"+a+".png");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="loading">
+
+<!-- 我是自定义加载动画 -->
+
+<img src="img/1.gif" alt="">
+
+</div>
+		<a href="index-7.html"><img src="img/hua1.png" id="zhanshi" class="hua2"/></a>
+		<img src="img/left2.png" class="left2" onclick="left()"/>
+		<img src="img/right2.png"  class="right2" onclick="right()"/>
+		<a href="index-2.html" ><img src="img/button1.png" class="button"/></a>
+	</body>
+</html>
